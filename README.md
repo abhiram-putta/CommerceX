@@ -4,8 +4,8 @@
 
 - Abhiram Putta ([@abhiram-putta](https://github.com/abhiram-putta))
 - Tarun Teja Uppuluri ([@tarunuppuluri](https://github.com/tarunuppuluri))
-- Shriyans Pillutla ([@username](https://github.com/shriyans-p))
-- Prabhas Ratnananda Adabala ([@username](https://github.com/Victor-Pra))
+- Shriyans Pillutla ([@shriyans-p](https://github.com/shriyans-p))
+- Prabhas Ratnananda Adabala ([@Victor-Pra](https://github.com/Victor-Pra))
 
 A full-stack e-commerce platform connecting customers, retailers, and wholesalers, with JWT authentication, a complete shopping/order/payment flow, and ML-powered product recommendations and semantic search. Originally built as an Object-Oriented Programming course project.
 
