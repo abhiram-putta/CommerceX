@@ -6,19 +6,20 @@ A full-stack e-commerce platform connecting customers, retailers, and wholesaler
 
 ```
 .
-├── frontend/          React + TypeScript SPA (Vite, Tailwind CSS)
-├── oopsProject/       FastAPI backend (the "real" production-style API)
-├── simple_backend.py  Standalone mock FastAPI backend with in-memory data,
-│                      useful for frontend development without a database
-├── QUICKSTART.md      Combined quick-start guide for both apps
-├── SERVER_STATUS.md   Notes on server setup/status
-└── START_SERVERS.md   Instructions for starting both servers together
+├── frontend/                       React + TypeScript SPA (Vite, Tailwind CSS)
+├── oopsProject/                    FastAPI backend (the "real" production-style API)
+├── dev-tools/
+│   └── simple_backend.py           Standalone mock FastAPI backend with in-memory data,
+│                                   useful for frontend development without a database
+├── QUICKSTART.md                   Combined quick-start guide for both apps
+├── SERVER_STATUS.md                Notes on server setup/status
+└── START_SERVERS.md                Instructions for starting both servers together
 ```
 
 There are two backend options:
 
 - **`oopsProject/`** — the full FastAPI application with SQLAlchemy models, repositories/services, Alembic migrations, Celery tasks, and ML modules. This is the real backend.
-- **`simple_backend.py`** — a single-file FastAPI app with mock/in-memory data (no database required), intended for quickly running the frontend against a fake API while the full backend is still in progress.
+- **`dev-tools/simple_backend.py`** — a single-file FastAPI app with mock/in-memory data (no database required), intended for quickly running the frontend against a fake API while the full backend is still in progress.
 
 ## Tech Stack
 
@@ -82,11 +83,12 @@ uvicorn app.main:app --reload
 
 API available at `http://localhost:8000` — interactive docs at `http://localhost:8000/docs`.
 
-### 1b. Backend (mock API — `simple_backend.py`)
+### 1b. Backend (mock API — `dev-tools/simple_backend.py`)
 
 For quick frontend iteration without setting up a database:
 
 ```bash
+cd dev-tools
 pip install fastapi uvicorn pyjwt bcrypt
 export SECRET_KEY=$(python -c "import secrets; print(secrets.token_hex(32))")  # Windows: set SECRET_KEY=...
 uvicorn simple_backend:app --reload
