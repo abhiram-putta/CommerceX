@@ -1,0 +1,73 @@
+# sMart E-Commerce Backend - Minimal Requirements
+# Installation: pip install -r requirements-minimal.txt
+# This includes only essential dependencies (no ML, no dev tools)
+
+# ============================================================================
+# ESSENTIAL CORE DEPENDENCIES
+# ============================================================================
+
+# FastAPI and Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+pydantic[email]==2.5.3
+pydantic-settings==2.1.0
+
+# Database - PostgreSQL
+sqlalchemy[asyncio]==2.0.25
+asyncpg==0.29.0
+alembic==1.13.1
+
+# Redis - Caching and Rate Limiting (Required for new features)
+redis==5.0.1
+
+# Authentication and Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.2
+
+# ============================================================================
+# ESSENTIAL UTILITIES
+# ============================================================================
+
+# Environment Configuration
+python-dotenv==1.0.0
+
+# Validation
+email-validator==2.1.0
+
+# Date and Time
+python-dateutil==2.8.2
+
+# HTTP Client
+httpx==0.26.0
+
+# WebSocket Support
+websockets==12.0
+
+# ============================================================================
+# OPTIONAL BUT RECOMMENDED
+# ============================================================================
+
+# Payment Gateway (if using Razorpay)
+razorpay==1.4.1
+
+# Logging (recommended)
+structlog==24.1.0
+
+# ============================================================================
+# INSTALLATION
+# ============================================================================
+
+# Install with:
+# pip install -r requirements-minimal.txt
+
+# Total packages: ~15 core packages
+# Installation time: ~2-3 minutes
+# Disk space: ~200-300 MB
+
+# Note: This minimal installation includes all features except:
+# - Machine Learning (recommendations, semantic search)
+# - Development tools (pytest, black, etc.)
+# - Advanced integrations (Twilio, SendGrid, MinIO)
+# - Deep learning frameworks (TensorFlow, PyTorch)

@@ -1,0 +1,70 @@
+"""
+Application constants.
+"""
+
+# Pagination
+DEFAULT_PAGE_SIZE = 20
+MAX_PAGE_SIZE = 100
+
+# Caching
+CACHE_KEY_PREFIX = "smart:"
+CACHE_KEY_USER_PREFIX = f"{CACHE_KEY_PREFIX}user:"
+CACHE_KEY_PRODUCT_PREFIX = f"{CACHE_KEY_PREFIX}product:"
+CACHE_KEY_SEARCH_PREFIX = f"{CACHE_KEY_PREFIX}search:"
+CACHE_KEY_CART_PREFIX = f"{CACHE_KEY_PREFIX}cart:"
+CACHE_KEY_SESSION_PREFIX = f"{CACHE_KEY_PREFIX}session:"
+
+# Cache TTL (in seconds)
+CACHE_TTL_SHORT = 300  # 5 minutes
+CACHE_TTL_MEDIUM = 900  # 15 minutes
+CACHE_TTL_LONG = 3600  # 1 hour
+CACHE_TTL_VERY_LONG = 86400  # 24 hours
+
+# Rating constraints
+MIN_RATING = 1
+MAX_RATING = 5
+
+# Password constraints
+MIN_PASSWORD_LENGTH = 8
+MAX_PASSWORD_LENGTH = 128
+
+# Image upload
+MAX_IMAGE_SIZE_MB = 10
+ALLOWED_IMAGE_TYPES = ["image/jpeg", "image/png", "image/webp"]
+
+# Order limits
+MAX_CART_ITEMS = 100
+MAX_ORDER_ITEMS = 50
+
+# Search
+MAX_SEARCH_RESULTS = 100
+SEARCH_QUERY_MIN_LENGTH = 2
+
+# ML Model constants
+DEFAULT_RECOMMENDATION_COUNT = 10
+MIN_RECOMMENDATION_COUNT = 5
+MAX_RECOMMENDATION_COUNT = 50
+
+# Location
+DEFAULT_COUNTRY = "India"
+DEFAULT_CURRENCY = "INR"
+
+# Email templates
+EMAIL_TEMPLATE_WELCOME = "welcome"
+EMAIL_TEMPLATE_ORDER_CONFIRMATION = "order_confirmation"
+EMAIL_TEMPLATE_ORDER_SHIPPED = "order_shipped"
+EMAIL_TEMPLATE_ORDER_DELIVERED = "order_delivered"
+EMAIL_TEMPLATE_PASSWORD_RESET = "password_reset"
+EMAIL_TEMPLATE_EMAIL_VERIFICATION = "email_verification"
+
+# SMS templates
+SMS_TEMPLATE_OTP = "otp"
+SMS_TEMPLATE_ORDER_UPDATE = "order_update"
+
+# Token expiration
+OTP_EXPIRATION_MINUTES = 10
+EMAIL_VERIFICATION_TOKEN_EXPIRATION_HOURS = 24
+PASSWORD_RESET_TOKEN_EXPIRATION_HOURS = 1
+
+# Regional settings
+SUPPORTED_REGIONS = ["Maharashtra", "Delhi", "Karnataka", "Tamil Nadu", "Gujarat"]
